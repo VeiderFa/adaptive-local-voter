@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+# Keep a clean notebook source; ignore executed copies
+notebooks/**/*.executed.ipynb
+
+# Data (obtained from Zenodo; see scripts/download_data.py)
+data/**/*.pkl
+data/**/*.pdf
+data/**/*.png
+
+# Regenerated figures (canonical reference figures are committed in figures/)
+figures/_generated/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

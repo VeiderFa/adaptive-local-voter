@@ -1,0 +1,14 @@
+# Exact versions from the conda environment ("margaret", Python 3.12.0)
+# that produced the manuscript results.
+numpy==2.1.3
+networkx==3.4.2
+numba==0.61.0
+matplotlib==3.10.0
+scipy==1.15.2
+joblib==1.4.2
+cycler==0.11.0
+# Notebook execution (optional)
+jupyter-client>=8.6
+nbconvert>=7.0
+# Tests
+pytest>=8.0

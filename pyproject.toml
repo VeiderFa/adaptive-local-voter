@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avm-release"
+version = "1.0.0"
+description = "Adaptive Voter Model: reproduction code for Veider, Jäger & Tang (2026)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+authors = [
+    { name = "Fabian Veider" },
+    { name = "Georg Jäger" },
+    { name = "Bao Quoc Tang" },
+]
+dependencies = [
+    "numpy==2.1.3",
+    "networkx==3.4.2",
+    "numba==0.61.0",
+    "matplotlib==3.10.0",
+    "scipy==1.15.2",
+    "joblib==1.4.2",
+    "cycler==0.11.0",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter-client>=8.6", "nbconvert>=7.0"]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

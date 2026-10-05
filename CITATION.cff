@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the manuscript and the archived release."
+title: "Adaptive Voter Model: reproduction code for 'How Recommendation Algorithms Shape Social Networks'"
+type: software
+authors:
+  - family-names: Veider
+    given-names: Fabian
+    affiliation: "Department of Environmental Systems Sciences, University of Graz, Austria"
+  - family-names: Jäger
+    given-names: Georg
+    affiliation: "Department of Environmental Systems Sciences, University of Graz, Austria"
+  - family-names: Tang
+    given-names: Bao Quoc
+    affiliation: "Department of Mathematics and Scientific Computing, University of Graz, Austria"
+version: "1.0.0"
+date-released: "2026-10-05"
+license: MIT
+repository-code: "https://github.com/VeiderFa/adaptive-local-voter"
+# doi: 10.5281/zenodo.XXXXXXX   # uncomment once the Zenodo DOI is minted
+keywords:
+  - adaptive voter model
+  - opinion dynamics
+  - polarization
+  - echo chambers
+  - homophily
+  - complex networks
+preferred-citation:
+  type: article
+  title: "How Recommendation Algorithms Shape Social Networks: An Adaptive Voter Model Approach"
+  authors:
+    - family-names: Veider
+      given-names: Fabian
+    - family-names: Jäger
+      given-names: Georg
+    - family-names: Tang
+      given-names: Bao Quoc
+  journal: "PLOS Complex Systems"
+  year: 2026
