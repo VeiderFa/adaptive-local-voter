@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: Veider
     given-names: Fabian
+    orcid: "https://orcid.org/0009-0002-3632-208X"
     affiliation: "Department of Environmental Systems Sciences, University of Graz, Austria"
   - family-names: Jäger
     given-names: Georg
