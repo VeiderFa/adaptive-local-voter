@@ -16,7 +16,7 @@ logic was changed).
 src/avm/
   avm_two_state_v2.py   # core AVM simulation (Numba JIT)
   sweep.py              # parameter-sweep driver / aggregation
-  plots.py              # manuscript figure code (extracted from the notebook)
+  plots.py              # manuscript figure code 
 scripts/
   run_sweep.py          # generate results_*_enhanced_sweep_n*.pkl
   make_figures.py       # regenerate manuscript figures from the pkl files
@@ -95,10 +95,7 @@ manuscript).
 
 **Figure fidelity.** Regenerated figures reproduce the manuscript
 quantitatively but are not pixel-identical: the archived reference figures were
-rendered with an older matplotlib/font stack, so the mean absolute pixel
-difference against them is roughly 8-16/255. The reimplementation itself is
-faithful (mean absolute pixel difference 0.47 against the original notebook
-code run on the same data).
+rendered with an older matplotlib/font stack.
 
 ## Data
 
