@@ -21,9 +21,11 @@ data/**/*.png
 # Regenerated figures (canonical reference figures are committed in figures/)
 figures/_generated/
 
-# OS / editor
+# OS / editor / shells
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
 *.swp
+.Rhistory
+.RData

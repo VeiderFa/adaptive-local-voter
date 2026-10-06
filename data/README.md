@@ -28,6 +28,24 @@ data/
     results_local_enhanced_sweep_n100.pkl
 ```
 
+## Zenodo filenames
+
+All six files share the local basename
+`results_{global,local}_enhanced_sweep_n100.pkl`, so on Zenodo they are stored
+with a **network prefix** and downloaded back to the canonical local path:
+
+| Zenodo filename | Local path |
+|---|---|
+| `ER_results_global_enhanced_sweep_n100.pkl` | `data/Sweep_ER_Undirected_Magnetization/results_global_enhanced_sweep_n100.pkl` |
+| `ER_results_local_enhanced_sweep_n100.pkl` | `data/Sweep_ER_Undirected_Magnetization/results_local_enhanced_sweep_n100.pkl` |
+| `WS_results_global_enhanced_sweep_n100.pkl` | `data/Sweep_WS_Undirected_Magnetization/results_global_enhanced_sweep_n100.pkl` |
+| `WS_results_local_enhanced_sweep_n100.pkl` | `data/Sweep_WS_Undirected_Magnetization/results_local_enhanced_sweep_n100.pkl` |
+| `BA_results_global_enhanced_sweep_n100.pkl` | `data/Sweep_BA_Undirected_Magnetization/results_global_enhanced_sweep_n100.pkl` |
+| `BA_results_local_enhanced_sweep_n100.pkl` | `data/Sweep_BA_Undirected_Magnetization/results_local_enhanced_sweep_n100.pkl` |
+
+The script maps these automatically; run `python scripts/download_data.py --info`
+to print the map. The canonical `.pkl` files are **not renamed** in place.
+
 ## pkl structure
 
 Each file is a dict keyed by average degree `k` (2, 4, 6, …, 22), then by

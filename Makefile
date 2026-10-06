@@ -13,11 +13,12 @@ DATA_ER := data/Sweep_ER_Undirected_Magnetization
 DATA_WS := data/Sweep_WS_Undirected_Magnetization
 DATA_BA := data/Sweep_BA_Undirected_Magnetization
 
-.PHONY: help test smoke sweep-ER sweep-WS sweep-BA figures figures-ER figures-WS figures-BA clean
+.PHONY: help test smoke download sweep-ER sweep-WS sweep-BA figures figures-ER figures-WS figures-BA clean
 
 help:
 	@echo "make test         - run the pytest smoke test"
 	@echo "make smoke        - quick end-to-end sweep + figure (tmp dir)"
+	@echo "make download     - fetch precomputed pkl files from Zenodo into data/"
 	@echo "make sweep-<NET>  - regenerate pkl sweep for ER/WS/BA (long)"
 	@echo "make figures      - regenerate all manuscript figures"
 	@echo "make figures-<NET>- regenerate figures for one topology"
@@ -29,6 +30,10 @@ smoke:
 	$(PYTHON) scripts/run_sweep.py --quick --graph-type ER --out /tmp/avm_smoke
 	$(PYTHON) scripts/make_figures.py --data-dir /tmp/avm_smoke --network ER \
 		--figures homophily --out /tmp/avm_smoke/figures
+
+# --- data ------------------------------------------------------------------------
+download:
+	$(PYTHON) scripts/download_data.py --out data
 
 # --- data generation (expensive) -------------------------------------------------
 sweep-ER:
