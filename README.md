@@ -31,15 +31,18 @@ Makefile, setup.sh, requirements.txt, pyproject.toml
 
 ## Install
 
+**Python 3.12 is required** — numba/llvmlite (pinned in `requirements.txt`)
+do not build on 3.13+.
+
 ```bash
-./setup.sh                    # creates .venv and installs pinned deps
+./setup.sh                    # creates .venv with Python 3.12 and installs pinned deps
 source .venv/bin/activate
 ```
 
 or manually:
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 pip install -e .
 ```
