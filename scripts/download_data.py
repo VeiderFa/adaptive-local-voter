@@ -5,7 +5,7 @@ The manuscript figures are generated from precomputed ``.pkl`` files rather
 than re-running the (very expensive) simulations.  The files are archived on
 Zenodo with a persistent DOI.
 
-    DOI (to be assigned): 10.5281/zenodo.XXXXXXX
+    DOI: 10.5281/zenodo.23193665
 
 Filename mapping
 ----------------
@@ -41,7 +41,7 @@ import sys
 import urllib.request
 
 # Set this after the Zenodo deposit is published.
-ZENODO_DOI = "10.5281/zenodo.XXXXXXX"  # TODO: replace after minting the DOI
+ZENODO_DOI = "10.5281/zenodo.23193665"
 
 NETWORKS = ("ER", "WS", "BA")
 STRATEGIES = ("global", "local")
@@ -82,15 +82,8 @@ def main() -> int:
     ap.add_argument("--info", action="store_true")
     args = ap.parse_args()
 
-    if args.info or "XXXXXXX" in ZENODO_DOI:
+    if args.info:
         _print_info()
-        if "XXXXXXX" in ZENODO_DOI:
-            print(
-                "\nThe DOI is not set yet. After publishing the Zenodo deposit, "
-                "replace ZENODO_DOI in scripts/download_data.py and re-run:\n"
-                "  python scripts/download_data.py --out data"
-            )
-            return 1
         return 0
 
     networks = [args.network] if args.network else list(NETWORKS)

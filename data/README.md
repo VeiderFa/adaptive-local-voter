@@ -10,8 +10,8 @@ git** (they are 60–250 MB each); they are archived on Zenodo.
 python scripts/download_data.py --out data
 ```
 
-The DOI is configured in `scripts/download_data.py` (placeholder until the
-deposit is published).
+The DOI is configured in `scripts/download_data.py`. The deposit is archived at
+[10.5281/zenodo.23193665](https://doi.org/10.5281/zenodo.23193665) (CC BY 4.0).
 
 ## Expected layout
 

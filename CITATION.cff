@@ -17,7 +17,7 @@ version: "1.0.0"
 date-released: "2026-10-05"
 license: MIT
 repository-code: "https://github.com/VeiderFa/adaptive-local-voter"
-# doi: 10.5281/zenodo.XXXXXXX   # uncomment once the Zenodo DOI is minted
+doi: 10.5281/zenodo.23193665
 keywords:
   - adaptive voter model
   - opinion dynamics

@@ -4,7 +4,7 @@ Code and precomputed results for:
 
 > **How Recommendation Algorithms Shape Social Networks: An Adaptive Voter Model Approach**
 > Fabian Veider, Georg Jäger, Bao Quoc Tang
-> *npj Complexity* (Nature Portfolio, 2026). DOI: *to be assigned*.
+> *npj Complexity* (Nature Portfolio, 2026). DOI: [10.5281/zenodo.23193665](https://doi.org/10.5281/zenodo.23193665).
 
 This repository reproduces every simulation figure in the manuscript. It is a
 cleaned, minimal extraction of the authors' working repository (no scientific
@@ -103,9 +103,9 @@ rendered with an older matplotlib/font stack.
 - **Canonical run:** the `Sweep_<NET>_Undirected_Magnetization` batches (Dec 2025,
   100 realisations) are the single canonical source for all manuscript figures.
   Earlier `*_Enhanced` batches are not required.
-- **Archive:** Zenodo DOI *to be assigned* (`data/README.md`,
-  `scripts/download_data.py`; ~720 MB of `.pkl`).
-- **License:** code MIT; data CC BY 4.0 (intended).
+- **Archive:** Zenodo DOI [10.5281/zenodo.23193665](https://doi.org/10.5281/zenodo.23193665)
+  (`data/README.md`, `scripts/download_data.py`; ~720 MB of `.pkl`).
+- **License:** code MIT; data CC BY 4.0 (as archived on Zenodo).
 - **Third-party material:** none included.
 
 ## Tested environment
