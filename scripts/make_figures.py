@@ -90,6 +90,8 @@ def main():
     ap.add_argument("--num-agents", type=int, default=100)
     ap.add_argument("--n-steps", type=int, default=100)
     ap.add_argument("--steps", type=int, default=1_000_000)
+    ap.add_argument("--heatmap-start-letter", type=int, default=0,
+                    help="offset for heatmap panel letters (0 -> (a)-(d), 4 -> (e)-(h))")
     args = ap.parse_args()
 
     os.makedirs(args.out, exist_ok=True)
@@ -131,6 +133,7 @@ def main():
                     num_agents=args.num_agents, k_val_list=k_list,
                     phi_list=phi_list, use_log_scale_convergence=False,
                     homo_val_heatmap=cfg["homo_val"],
+                    start_letter=args.heatmap_start_letter,
                 )
             else:
                 raise SystemExit(f"unknown figure family: {fam}")

@@ -26,6 +26,18 @@ matplotlib.use("Agg")  # headless
 import matplotlib.pyplot as plt
 
 
+def _panel_letter(i: int) -> str:
+    """Return ``(a)``, ``(b)``, ... for a 0-based index (wraps after z)."""
+    return f"({chr(ord('a') + i % 26)})"
+
+
+def _label_panel(ax, i: int, fontsize: int = 18):
+    """Place a bold sans-serif panel letter at the top-left of an axes."""
+    ax.text(-0.12, 1.08, _panel_letter(i), transform=ax.transAxes,
+            fontsize=fontsize, fontweight="bold", va="top", ha="left",
+            fontfamily="sans-serif")
+
+
 def plot_combined_degree_distributions(
     results_global,
     results_local,
@@ -458,10 +470,13 @@ def plot_heatmaps(
     k_val_list=None,
     phi_list=None,
     use_log_scale_convergence=False,
+    start_letter=0,
 ):
     """2x2 heatmaps of largest-component size s1 and convergence time tau.
 
-    Direct port of cell 27.
+    Direct port of cell 27.  ``start_letter`` offsets the panel letters so
+    several heatmaps can be combined into one figure without repeating
+    letters (e.g. 0 for (a)-(d), 4 for (e)-(h)).
     """
     fig, axs = plt.subplots(2, 2, figsize=(20, 16), sharex="col", sharey="row")
     plt.subplots_adjust(hspace=0.1, wspace=0.15)
@@ -564,10 +579,8 @@ def plot_heatmaps(
     cbar2.set_label(colorbar_label, fontsize=LABEL_SIZE)
     cbar2.ax.tick_params(labelsize=TICK_SIZE)
 
-    panel_labels = ["(a)", "(b)", "(c)", "(d)"]
     for i, ax in enumerate(axs.flat):
-        ax.text(-0.1, 1.1, panel_labels[i], transform=ax.transAxes,
-                fontsize=TITLE_SIZE, fontweight="bold", va="top")
+        _label_panel(ax, start_letter + i, fontsize=TITLE_SIZE)
 
     scale_suffix = "_logscale" if use_log_scale_convergence else "_linearscale"
     filename = (
